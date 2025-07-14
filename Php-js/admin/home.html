@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="user.css">
+</head>
+<body>
+  <div class="dashboard-container">
+    <!-- Collapsible Sidebar -->
+    <nav class="dashboard-sidebar">
+      <ul>
+        <li><a href="#" class="logo">
+          <i class="fas fa-chart-line"></i>
+          <span class="nav-item">Dashboard</span>
+        </a></li>
+        <li><a href="home.html" class="active"><i class="fas fa-home"></i> <span class="nav-item">Home</span></a></li>
+        <li><a href="usermanagement.html"><i class="fas fa-users"></i> <span class="nav-item">Users</span></a></li>
+        <li><a href="/admin/profileadmin.html"><i class="fas fa-user"></i> <span class="nav-item">Profile</span></a></li>
+        <li><a href="#"><i class="fas fa-cog"></i> <span class="nav-item">Settings</span></a></li>
+        <li><a href="#"><i class="fas fa-question-circle"></i> <span class="nav-item">Help</span></a></li>
+        <li class="logout-container"><a href="/login.html" class="logout"><i class="fas fa-sign-out-alt"></i> <span class="nav-item">Log out</span></a></li>
+      </ul>
+    </nav>
+
+    <main class="dashboard-main">
+      <div class="main-header">
+        <h1><b>Users</b></h1>
+
+      </div>
+      
+      <div class="stats-container">
+        <div class="stat-card">
+          <div class="stat-icon">
+            <i class="fas fa-chalkboard-teacher"></i>
+          </div>
+          <div class="stat-content">
+            <h3>Teachers</h3>
+            <p class="stat-value"></p>
+            <button class="stat-btn">View All</button>
+          </div>
+        </div>
+        
+        <div class="stat-card">
+          <div class="stat-icon">
+            <i class="fas fa-user-graduate"></i>
+          </div>
+          <div class="stat-content">
+            <h3>Students</h3>
+            <p class="stat-value"></p>
+            <button class="stat-btn">View All</button>
+          </div>
+        </div>
+    
+       </div>
+    </main>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="user.js"></script>
+</body>
+</html>

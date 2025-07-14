@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1735397758 source:c:\users\mohamedaminebenharb\desktop\3ing-s-a-materials\materials\c\pointeur\miniprojet\miniprojetcfinale\miniporjetcfinale\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<stdbool.h>
+	<ctype.h>
+

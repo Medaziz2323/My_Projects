@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" 
+        crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="user.css">
+  <style>
+  .main {
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 75%;
+    margin: auto;
+    }
+  
+  .main-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+  }
+  
+  .main-top h1 {
+    margin: 0;
+    font-size: 24px;
+  }
+  
+  .profile-container {
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+  }
+  
+  .profile-card {
+    width: 30%;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-radius: 10px;
+  }
+  
+  .profile-card .profile-image img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .profile-card .profile-info h3 {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+  
+  .profile-card .profile-info p {
+    font-size: 14px;
+    color: #888;
+  }
+  
+  .profile-edit {
+    width: 65%;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  .profile-edit h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+  
+  .profile-edit .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .profile-edit label {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .profile-edit .form-control {
+    width: 100%;
+    padding: 12px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+  }
+  
+  .profile-edit .btn-save {
+    background-color: #e15d2b;
+    color: white;
+    padding: 10px 15px;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+  }
+  
+  .profile-edit .btn-save:hover {
+    background-color: #f74200;
+  }
+  
+  </style>
+</head>
+<body>
+  <div class="dashboard-container">
+    <nav class="dashboard-sidebar">
+      <ul>
+        <li><a href="#" class="logo">
+          <i class="fas fa-chart-line"></i>
+          <span class="nav-item">Dashboard</span>
+        </a></li>
+        <li><a href="home.html"><i class="fas fa-home"></i> <span class="nav-item">Home</span></a></li>
+        <li><a href="usermanagement.html" class="active"><i class="fas fa-users"></i> <span class="nav-item">Users</span></a></li>
+        <li><a href="/admin/profileadmin.html"><i class="fas fa-user"></i> <span class="nav-item">Profile</span></a></li>
+        <li><a href="#"><i class="fas fa-cog"></i> <span class="nav-item">Settings</span></a></li>
+        <li><a href="#"><i class="fas fa-question-circle"></i> <span class="nav-item">Help</span></a></li>
+        <li class="logout-container"><a href="/login.html" class="logout"><i class="fas fa-sign-out-alt"></i> <span class="nav-item">Log out</span></a></li>
+      </ul>
+    </nav>
+
+    <main class="dashboard-main">
+            <div class="main-top">
+        <h1><b>Profile</b></h1>
+      </div>
+
+      <div class="profile-container">
+        <div class="profile-card">
+          <div class="profile-image">
+            <img src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg" alt="Profile Image">
+          </div>
+          <div class="profile-info">
+            <h3>Name</h3>
+            <p class="email">Email@gmail.com</p>
+          </div>
+        </div>
+
+        <div class="profile-edit">
+          <h2>Edit Profile</h2>
+          <form>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" class="form-control" placeholder="First Name">
+              </div>
+              <div class="form-group">
+                <label for="surname">Surname</label>
+                <input type="text" id="surname" class="form-control" placeholder="Surname">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="phone">Mobile Number</label>
+              <input type="text" id="phone" class="form-control" placeholder="Phone Number">
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="text" id="email" class="form-control" placeholder="Email Address">
+            </div>
+  
+            <button type="submit" class="btn-save">Save Profile</button>
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="user.js"></script>
+
+</body>
+</html>

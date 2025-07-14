@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tasks</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    .task-table-container {
+      margin-top: 20px;
+    }
+    .task-table-container h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    .task-table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
+    .task-table th, .task-table td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+    .task-table th {
+      background-color: #f4f4f4;
+      font-weight: bold;
+    }
+    .task-table td {
+      font-size: 16px;
+    }
+    .task-table button {
+      padding: 8px 16px;
+      background-color: #007bff;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .task-table button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav>
+      <ul>
+        <li><a href="#" class="logo"><span class="nav-item">Dashboard</span></a></li>
+        <li><a href="/etudiant/cours.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="/etudiant/profile.html"><i class="fas fa-user"></i> Profile</a></li>
+        <li><a href="/etudiant/notes.html"><i class="fas fa-chart-bar"></i> Grades</a></li>
+        <li><a href="/etudiant/devoirs.html"><i class="fas fa-tasks"></i> Tasks</a></li>
+        <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+        <li><a href="#"><i class="fas fa-question-circle"></i> Help</a></li>
+        <li><a href="/login.html" class="logout"><i class="fas fa-sign-out-alt"></i> Log out</a></li>
+      </ul>
+    </nav>
+
+    <section class="main">
+      <h1>My Tasks</h1>
+      <div class="task-table-container">
+        <h2>Tasks Overview</h2>
+        <table class="task-table">
+          <thead>
+            <tr>
+              <th>Task Name</th>
+              <th>Description</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td colspan="3" style="text-align: center;">No tasks available</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

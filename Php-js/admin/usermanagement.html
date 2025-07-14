@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Management Dashboard</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" 
+        crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="user.css">
+</head>
+<body>
+  <div class="dashboard-container">
+    <!-- Collapsible Sidebar -->
+    <nav class="dashboard-sidebar">
+      <ul>
+        <li><a href="#" class="logo">
+          <i class="fas fa-chart-line"></i>
+          <span class="nav-item">Dashboard</span>
+        </a></li>
+        <li><a href="home.html"><i class="fas fa-home"></i> <span class="nav-item">Home</span></a></li>
+        <li><a href="usermanagement.html" class="active"><i class="fas fa-users"></i> <span class="nav-item">Users</span></a></li>
+        <li><a href="/admin/profileadmin.html"><i class="fas fa-user"></i> <span class="nav-item">Profile</span></a></li>
+        <li><a href="#"><i class="fas fa-cog"></i> <span class="nav-item">Settings</span></a></li>
+        <li><a href="#"><i class="fas fa-question-circle"></i> <span class="nav-item">Help</span></a></li>
+        <li class="logout-container"><a href="/login.html" class="logout"><i class="fas fa-sign-out-alt"></i> <span class="nav-item">Log out</span></a></li>
+      </ul>
+    </nav>
+
+    <main class="dashboard-main">
+      <div class="main-header">
+        <h1><b>User Management</b></h1>
+        <button id="addUserBtn" class="add-user-btn">
+          <i class="fas fa-plus"></i> Add User
+        </button>
+      </div>
+      
+      <div class="content-box">
+        <div class="table-header">
+          <h3>Users List</h3>
+        </div>
+        <div class="table-responsive">
+          <table class="user-table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Role</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="userTableBody">
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <div class="modal fade" id="userModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalTitle">Add User</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="userForm">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="form-group">
+              <label for="role">Role</label>
+              <select class="form-control" id="role" required>
+                <option value="admin">Admin</option>
+                <option value="teacher">Teacher</option>
+                <option value="student">Student</option>
+              </select>
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="submit-btn">Save User</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="user.js"></script>
+</body>
+</html>

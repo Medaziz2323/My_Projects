@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grades</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    table th, table td {
+      padding: 12px;
+      text-align: left;
+      border: 1px solid #ddd;
+    }
+    table th {
+      background-color: #f4f4f4;
+    }
+    table tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+    .view-result-btn {
+      background-color: #007bff;
+      color: white;
+      padding: 8px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .view-result-btn:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav>
+      <ul>
+        <li><a href="#" class="logo"><span class="nav-item">Dashboard</span></a></li>
+        <li><a href="/etudiant/cours.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="/etudiant/profile.html"><i class="fas fa-user"></i> Profile</a></li>
+        <li><a href="/etudiant/notes.html"><i class="fas fa-chart-bar"></i> Grades</a></li>
+        <li><a href="/etudiant/devoirs.html"><i class="fas fa-tasks"></i> Tasks</a></li>
+        <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+        <li><a href="#"><i class="fas fa-question-circle"></i> Help</a></li>
+        <li><a href="/login.html" class="logout"><i class="fas fa-sign-out-alt"></i> Log out</a></li>
+      </ul>
+    </nav>
+
+    <section class="main">
+      <h1>Grades</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>Course</th>
+            <th>Action</th>
+            <th>Grade</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>HTML</td>
+            <td><button class="view-result-btn">View Result</button></td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>CSS</td>
+            <td><button class="view-result-btn">View Result</button></td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>JavaScript</td>
+            <td><button class="view-result-btn">View Result</button></td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>Java</td>
+            <td><button class="view-result-btn">View Result</button></td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>Operating System</td>
+            <td><button class="view-result-btn">View Result</button></td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>Networks</td>
+            <td><button class="view-result-btn">View Result</button></td>
+            <td>-</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </div>
+</body>
+</html>

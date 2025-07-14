@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tasks</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    .task-container {
+      margin-top: 20px;
+    }
+    .task-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #f4f4f4;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .task-header h2 {
+      font-size: 20px;
+    }
+    .task-input {
+      width: 80%;
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      margin-right: 10px;
+    }
+    .add-task-btn {
+      padding: 8px 15px;
+      background-color: #007bff;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .add-task-btn:hover {
+      background-color: #0056b3;
+    }
+    .task-list {
+      margin-top: 20px;
+      list-style: none;
+      padding-left: 0;
+    }
+    .task-item {
+      background-color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .task-item p {
+      font-size: 16px;
+      margin: 0;
+    }
+    .task-item button {
+      padding: 5px 12px;
+      background-color: #dc3545;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .task-item button:hover {
+      background-color: #c82333;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav>
+      <ul>
+        <li><a href="#" class="logo"><span class="nav-item">Dashboard</span></a></li>
+        <li><a href="/etudiant/cours.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="/etudiant/profile.html"><i class="fas fa-user"></i> Profile</a></li>
+        <li><a href="/etudiant/notes.html"><i class="fas fa-chart-bar"></i> Grades</a></li>
+        <li><a href="/etudiant/devoirs.html"><i class="fas fa-tasks"></i> Tasks</a></li>
+        <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+        <li><a href="#"><i class="fas fa-question-circle"></i> Help</a></li>
+        <li><a href="/login.html" class="logout"><i class="fas fa-sign-out-alt"></i> Log out</a></li>
+      </ul>
+    </nav>
+
+    <section class="main">
+      <h1>My Tasks</h1>
+
+      <!-- Task Input Section -->
+      <div class="task-container">
+        <div class="task-header">
+          <h2>To-Do List</h2>
+          <div>
+            <input type="text" id="taskInput" class="task-input" placeholder="Enter a new task...">
+            <button class="add-task-btn" id="addTaskBtn">Add Task</button>
+          </div>
+        </div>
+
+        <!-- Task List -->
+        <ul id="taskList" class="task-list">
+          <!-- Tasks will be dynamically added here -->
+        </ul>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    // JavaScript to handle task adding/removal
+    const addTaskBtn = document.getElementById('addTaskBtn');
+    const taskInput = document.getElementById('taskInput');
+    const taskList = document.getElementById('taskList');
+
+    addTaskBtn.addEventListener('click', function() {
+      const taskText = taskInput.value.trim();
+
+      if (taskText) {
+        const taskItem = document.createElement('li');
+        taskItem.classList.add('task-item');
+
+        // Create the task content
+        const taskContent = document.createElement('p');
+        taskContent.textContent = taskText;
+
+        // Create the remove button
+        const removeBtn = document.createElement('button');
+        removeBtn.textContent = 'Remove';
+        removeBtn.addEventListener('click', function() {
+          taskItem.remove();
+        });
+
+        taskItem.appendChild(taskContent);
+        taskItem.appendChild(removeBtn);
+        taskList.appendChild(taskItem);
+
+        // Clear the input field after adding the task
+        taskInput.value = '';
+      }
+    });
+  </script>
+</body>
+</html>
