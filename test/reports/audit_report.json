@@ -1,0 +1,79 @@
+{
+    "generated_at": "2026-01-28T11:09:49.909485",
+    "events": [
+        {
+            "timestamp": 1769598187.0713673,
+            "attack": "AI:sql_injection",
+            "severity": 7,
+            "impact": "Detected by ML model",
+            "evidence": "GET /users HTTP/1.1 ",
+            "confidence": 0.39,
+            "src_ip": "127.0.0.1",
+            "dst_ip": "127.0.0.1",
+            "src_port": 41152,
+            "dst_port": 5000,
+            "protocol": "HTTP"
+        },
+        {
+            "timestamp": 1769598290.0387666,
+            "attack": "Command Injection",
+            "severity": 9,
+            "impact": "Remote command execution",
+            "evidence": "ls ",
+            "src_ip": "127.0.0.1",
+            "dst_ip": "127.0.0.1",
+            "src_port": 45926,
+            "dst_port": 5000,
+            "protocol": "HTTP"
+        },
+        {
+            "timestamp": 1769598402.831009,
+            "attack": "XSS",
+            "severity": 6,
+            "impact": "Client-side code execution",
+            "evidence": "<script>",
+            "src_ip": "127.0.0.1",
+            "dst_ip": "127.0.0.1",
+            "src_port": 37402,
+            "dst_port": 5000,
+            "protocol": "HTTP"
+        },
+        {
+            "timestamp": 1769598402.8310127,
+            "attack": "XSS",
+            "severity": 6,
+            "impact": "Client-side code execution",
+            "evidence": "alert(",
+            "src_ip": "127.0.0.1",
+            "dst_ip": "127.0.0.1",
+            "src_port": 37402,
+            "dst_port": 5000,
+            "protocol": "HTTP"
+        },
+        {
+            "timestamp": 1769598453.1144347,
+            "attack": "AI:sql_injection",
+            "severity": 7,
+            "impact": "Detected by ML model",
+            "evidence": "POST /login HTTP/1.1 username=select password from users&password=test",
+            "confidence": 0.95,
+            "src_ip": "127.0.0.1",
+            "dst_ip": "127.0.0.1",
+            "src_port": 36160,
+            "dst_port": 5000,
+            "protocol": "HTTP"
+        },
+        {
+            "timestamp": 1769598522.8727698,
+            "attack": "SQL Injection",
+            "severity": 8,
+            "impact": "Authentication bypass / data leakage",
+            "evidence": "or 1=1",
+            "src_ip": "127.0.0.1",
+            "dst_ip": "127.0.0.1",
+            "src_port": 56632,
+            "dst_port": 5000,
+            "protocol": "HTTP"
+        }
+    ]
+}

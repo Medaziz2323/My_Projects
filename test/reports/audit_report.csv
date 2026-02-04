@@ -1,0 +1,7 @@
+Date,Time,Attack,Severity,AI Confidence,Impact,Evidence,Source IP,Source Port,Destination IP,Destination Port,Protocol
+2026-01-28,06:03:07.071367,AI:sql_injection,7,0.39,Detected by ML model,GET /users HTTP/1.1 ,127.0.0.1,41152,127.0.0.1,5000,HTTP
+2026-01-28,06:04:50.038767,Command Injection,9,,Remote command execution,ls ,127.0.0.1,45926,127.0.0.1,5000,HTTP
+2026-01-28,06:06:42.831009,XSS,6,,Client-side code execution,<script>,127.0.0.1,37402,127.0.0.1,5000,HTTP
+2026-01-28,06:06:42.831013,XSS,6,,Client-side code execution,alert(,127.0.0.1,37402,127.0.0.1,5000,HTTP
+2026-01-28,06:07:33.114435,AI:sql_injection,7,0.95,Detected by ML model,POST /login HTTP/1.1 username=select password from users&password=test,127.0.0.1,36160,127.0.0.1,5000,HTTP
+2026-01-28,06:08:42.872770,SQL Injection,8,,Authentication bypass / data leakage,or 1=1,127.0.0.1,56632,127.0.0.1,5000,HTTP
